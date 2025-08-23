@@ -19,7 +19,9 @@ int main() {
         }   
     }
     if (solucao) {
-        printf("Para pagar %d de taxa serão necessários %d selos de 5 centavos e %d selos de 3 centavos.\n", taxa, selo5, selo3);
+        printf("Para pagar a taxa de %d centavos serão necessários:\n", taxa);
+        printf("%d selos de 3 centavos.\n", selo3);
+        printf("%d selos de 5 centavos.\n", selo5);
     }
     else {
         printf("Não foi possível encontrar uma combinação de selos para a taxa de %d\n", taxa);
