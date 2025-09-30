@@ -25,14 +25,14 @@ void traduzir_morse(const char* codigo) {
 }
 
 void traduzir_morse_corrompido(const char* codigo) {
-    char prefixo[20];
-    strncpy(prefixo, codigo, strlen(codigo) - 1);
-    prefixo[strlen(codigo) - 1] = '\0';
-    size_t tamanho_prefixo = strlen(prefixo);
+    char temp[20];
+    strncpy(temp, codigo, strlen(codigo) - 1);
+    temp[strlen(codigo) - 1] = '\0';
+    size_t tamanho_temp = strlen(temp);
 
     printf("[");
     for (int i = 0; i < 26; i++) {
-        if (strncmp(prefixo, CODIGO_MORSE[i], tamanho_prefixo) == 0) {
+        if (strncmp(temp, CODIGO_MORSE[i], tamanho_temp) == 0) {
             printf("%c", ALFABETO[i]);
         }
     }
@@ -40,11 +40,12 @@ void traduzir_morse_corrompido(const char* codigo) {
 }
 
 int main() {
-    char linha_entrada[1024];
+    char linha_entrada[150];
     char codigo_letra[20];
     int indice_letra = 0;
     int contador_espacos = 0;
 
+    printf("Digite o Código Morse: ");
     fgets(linha_entrada, sizeof(linha_entrada), stdin);
     
     for (int i = 0; i < strlen(linha_entrada); i++) {
