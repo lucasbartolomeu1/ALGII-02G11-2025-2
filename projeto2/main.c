@@ -1,3 +1,10 @@
+/*
+ - Projeto 2 - Codificador de Imagens
+ - Lucas dos Santos Bartolomeu - RA: 10747984
+ - Victor Esteves Gallo Birello - RA: 10737139 
+ - Link do Vídeo: 
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include "imagem.h"
